@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+// <!-- The beginning of my class - header -->
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    .navbar_content {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding:10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // <!-- The beginning of my class - menu_logo -->
+    .menu_logo {
+        width: 35px;
+        height: 35px;
+    }
+    // <!-- Completing my class - menu_logo -->
+    // <!-- The beginning of my class - nav_content -->
+    .nav_content {
+        display: block;
+        // position: relative;
+        transition: all 0.5s ease;
+        .menu_list {
+            display: flex;
+            @media (max-width: 767px){
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 60px;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                padding: 0 0 60px 0;
+                overflow: auto;
+                background:#857b7b;
+            &.show {
+                display: flex;
+                justify-content: center;
+            }
+          }
+            li {
+                padding: 0 10px;
+                list-style: none;
+                @media (max-width:767px) {
+                    line-height: 60px;
+                }
+                a {
+                  font-size: 15px;
+                  text-decoration: none;
+                  color: white;
+                  &:after {
+                      content: "";
+                      display: block;
+                      width:0%;
+                      border-bottom: 2px solid white;
+                      transition: width 0.5s ease;
+                  }
+                  &:hover:after {
+                      width: 100%;
+
+                  }
+                  @media (max-width:767px) {
+                      font-size: 30px;
+                  }
+                  @media (max-width:576px) {
+                    font-size: 25px;
+                }
+              }
+            }
+          }
+        }
+        // <!-- Completing my class - nav-content -->
+        // <!-- The beginning of my class - menu_hamburger -->
+        .menu_hamburger {
+            display: none;
+            @media (max-width: 767px){
+                display: block;
+            }
+            .btn_menu {
+                min-width: 40px;
+                min-height: 25px;
+                background-color: transparent;
+                cursor: pointer;
+                display: flex;
+            }
+            .line {
+                fill: none;
+                stroke: white;
+                stroke-width: 6;
+                transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+              }
+              .line1 {
+                stroke-dasharray: 60 207;
+                stroke-width: 6;
+              }
+              .line2 {
+                stroke-dasharray: 60 60;
+                stroke-width: 6;
+              }
+              .line3 {
+                stroke-dasharray: 60 207;
+                stroke-width: 6;
+              }
+              .opened .line1 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+                stroke-width: 6;
+              }
+              .opened .line2 {
+                stroke-dasharray: 1 60;
+                stroke-dashoffset: -30;
+                stroke-width: 6;
+              }
+              .opened .line3 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+                stroke-width: 6;
+            }
+        }
+        // <!-- Completing my class - menu_hamburger -->
+    }
+}
+// <!-- Completing my class - header -->
+// <!-- The beginning of my class - content_home -->
+.main {
+    background: #000000;
+}
+.content_home {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 90px 0;
+    align-items: center;
+    flex-direction: column;
+    background: url(../images/camera.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .home_title {
+        line-height: 70px;
+        h1 {
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        @media (max-width:767px) {
+            font-size: 35px;        
+        }
+        @media (max-width:576px) {
+            font-size: 25px;
+        }
+        @media (max-width:400px) {
+            font-size: 20px;
+        }
+    }
+        p {
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            @media (max-width:767px) {
+                font-size: 20px;
+            }
+            @media (max-width:576px) {
+                font-size: 15px;
+            }
+            @media (max-width:400px) {
+                font-size: 13px;
+            }
+        }
+    }
+    .content_connect{
+        display: flex;
+        justify-content: center;
+        .btn_connect {
+            min-width: 220px;
+            min-height: 45px;
+            margin: 30px 0;
+            border: 2px solid white;
+            background:transparent;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                background-color: rgb(155, 153, 153);
+                transition: 0.5s;
+            }
+            a {
+                font-size: 14px;
+                letter-spacing: 1px;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+// <!-- Completing my class - content_home -->
+// <!-- The beginning of my class - technology_services_gradient -->
+.technology_services_gradient {
+    padding: 20px 0 0 0;
+    border-bottom: 2px solid rgb(105, 104, 104);
+    background: linear-gradient(to right, #000000 0%, #000000 30%, #220b38 30%, #220b38 100%);
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+            .row {
+                display: flex;
+                @media (max-width:992px) {
+                    flex-direction: column;
+            }
+            .left_side_col{
+                width: 50%;
+                padding: 30px 0 0 0;
+                @media (max-width:992px) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                img {
+                    @media (max-width:992px) {
+                        width: 60%;
+                    }
+                }
+            }
+            .right_side_col {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                @media (max-width:992px) {
+                    width: 100%;
+                }
+                .text_content {
+                    text-align: center;
+                    span {
+                        font-size: 40px;
+                        font-weight: 900;
+                        letter-spacing: 1px;
+                        color: white;
+                        margin: 0 0 30px 0;
+                        @media (max-width:576px) {
+                            font-size: 25px;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 25px;
+                        padding: 0px 0 40px 0;
+                        color: white;
+                        @media (max-width:576px) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .btn_services {
+                    margin: 0 0 10px 0;
+                    min-width: 300px;
+                    min-height: 50px;
+                    border: 2px solid white;
+                    background:transparent;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover {
+                        background-color: rgb(155, 153, 153);
+                        transition: 0.5s;
+                    }
+                    a {
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+             }
+          } 
+       }
+    }
+// <!-- Completing my class - technology_services_gradient -->
+// <!-- The beginning of my class - technology_services -->
+.technology_services {
+    padding: 20px 0 0 0;
+    border-bottom: 2px solid rgb(105, 104, 104);
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 15px;
+        .row_reverse {
+            display: flex;
+            @media (max-width:992px) {
+                flex-direction: column-reverse;
+        }
+        .left_side_col {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            @media (max-width:992px) {
+                width: 100%;
+            }
+            .text_content {
+                text-align: center;
+                span {
+                    font-size: 40px;
+                    font-weight: 900;
+                    letter-spacing: 1px;
+                    color: white;
+                    margin: 0 0 30px 0;
+                    @media (max-width:576px) {
+                        font-size: 25px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    padding: 0px 0 40px 0;
+                    color: white;
+                    @media (max-width:576px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .btn_services {
+                margin: 0 0 10px 0;
+                min-width: 300px;
+                min-height: 50px;
+                border: 2px solid white;
+                background:transparent;
+                cursor: pointer;
+                transition: 0.5s;
+                &:hover {
+                    background-color: rgb(155, 153, 153);
+                    transition: 0.5s;
+                }
+                a {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+        .right_side_col{
+            width: 50%;
+            padding: 30px 0 0 0;
+            @media (max-width:992px) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+          }
+          img {
+            @media (max-width:992px) {
+                width: 60%;
+            }
+          }
+        }
+      } 
+   }
+}
+// <!-- Completing my class - technology_services -->
+// <!-- The beginning of my class - form_content -->
+.form_work {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    .form_title {
+        text-align: center;
+        margin: 0 0 50px 0;
+    strong {
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: white;
+    }
+  }
+  .form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @media (max-width:840px) {
+        display: block;  
+        width: 80%;
+        margin: auto;
+      }
+      @media (max-width:576px) {
+        width: 100%;
+      }
+    .work_input {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 220px;
+        margin: 0 15px;
+        label {
+            font-weight: 500;
+            color: white;
+        }
+        input{
+            margin: 5px 0;
+            padding:0 10px;
+            min-height: 40px;
+            font-size: 17px;
+            border-radius: 5px;
+            background: white;
+        }
+     }
+     .work_message {
+         flex: 0 1 773px;
+         display: flex;
+         margin: 10px 15px 10px;
+         flex-direction: column;
+        label {
+            font-weight: 500;
+            color: white;
+        }
+        textarea {
+            width: 100%;
+            max-height: 200px;
+            font-size: 17px;
+            margin: 5px 0;
+            padding: 10px 0 0 10px;
+            border-radius: 5px;
+            @media (max-width:576px) {
+                max-height: 150px;
+            }
+        }
+      }
+    }
+        .form_btn {
+            margin:20px auto 0;
+            button {
+            min-width: 250px;
+            min-height: 50px;
+            border: 2px solid white;
+            
+            background:transparent;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+                background-color: rgb(155, 153, 153);
+                transition: 0.5s;
+            }
+            a {
+                font-size: 14px;
+                letter-spacing: 1px;
+                text-decoration: none;
+                color: white;
+            }
+          }
+        }
+ }
+// <!-- Completing my class - "form_content -->
+// <!-- The beginning of my class - footer -->
+.footer {
+    width: 100%;
+    background: #000000;
+    .footer_content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    .footer_icons {
+        padding: 50px 0;
+        margin: 0 auto;
+        a {
+            font-size: 25px;
+            padding: 0 30px;
+            @media (max-width: 576px) {
+                font-size: 22px;
+                padding: 0 17px;
+            }
+         }
+      } 
+        p {
+            text-align: center;
+            padding: 0 0 30px 0;
+            letter-spacing: 0.5px;
+            color: white;
+            @media (max-width: 576px) {
+                font-size: 14px;
+            }
+        }   
+    }
+}
+// <!-- Completing my class - footer -->
+
+
+  
+
+ 
